@@ -1,0 +1,15 @@
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\DocsFileService.exe.config
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\DocsFileService.exe
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\DocsFileService.pdb
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\obj\Debug\DocsFileService.csprojResolveAssemblyReference.cache
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\obj\Debug\DocsFileService.csproj.CoreCompileInputs.cache
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\obj\Debug\DocsFileService.exe
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\obj\Debug\DocsFileService.pdb
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\NLog.config
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\WopiCobaltHost.exe
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\NLog.dll
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\WopiCobaltHost.pdb
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\WopiCobaltHost.exe.config
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\bin\Debug\NLog.xml
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\obj\Debug\DocsFileService.ProjectInstaller.resources
+C:\Resource\WorkSpace\WopiHost-master\DocsFileService\obj\Debug\DocsFileService.csproj.GenerateResource.Cache

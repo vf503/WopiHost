@@ -1,0 +1,6 @@
+
+WopiCobaltHost/bin
+WopiCobaltHost/obj
+*.suo
+/.vs/WopiHost/v15/Server/sqlite3/db.lock
+/.vs/WopiHost/v15/sqlite3/db.lock
