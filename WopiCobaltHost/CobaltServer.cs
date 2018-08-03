@@ -118,6 +118,15 @@ namespace WopiCobaltHost
                             var ms = new MemoryStream();
                             context.Request.InputStream.CopyTo(ms);
                             editSession.Save(ms.ToArray());
+                            if (String.IsNullOrEmpty(context.Request.QueryString["del"]))
+                            {
+
+                            }
+                            else
+                            {
+                                string DelFileName = context.Request.QueryString["del"].ToString();
+                                File.Delete(m_docsPath + "/" + DelFileName);
+                            }
                             context.Response.ContentLength64 = 0;
                             context.Response.ContentType = @"text/html";
                             context.Response.StatusCode = (int)HttpStatusCode.OK;

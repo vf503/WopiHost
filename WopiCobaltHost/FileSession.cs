@@ -71,9 +71,19 @@ namespace WopiCobaltHost
         {
             lock (m_fileinfo)
             {
-                using (FileStream fileStream = m_fileinfo.Open(FileMode.Truncate))
+                if (m_fileinfo.Exists)
                 {
-                    fileStream.Write(new_content, 0, new_content.Length);
+                    using (FileStream fileStream = m_fileinfo.Open(FileMode.Truncate))
+                    {
+                        fileStream.Write(new_content, 0, new_content.Length);
+                    }
+                }
+                else
+                {
+                    using (FileStream fileStream = m_fileinfo.Open(FileMode.Create))
+                    {
+                        fileStream.Write(new_content, 0, new_content.Length);
+                    }
                 }
             }
             m_lastUpdated = DateTime.Now;
