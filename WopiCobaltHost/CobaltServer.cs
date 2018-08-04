@@ -129,6 +129,7 @@ namespace WopiCobaltHost
                             }
                             context.Response.ContentLength64 = 0;
                             context.Response.ContentType = @"text/html";
+                            context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
                             context.Response.StatusCode = (int)HttpStatusCode.OK;
                         }
                         else
