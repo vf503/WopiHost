@@ -126,6 +126,18 @@ namespace WopiCobaltHost
                             {
                                 string DelFileName = context.Request.QueryString["del"].ToString();
                                 File.Delete(m_docsPath + "/" + DelFileName);
+                                string[] DelFileNameArr = DelFileName.Split(new char[2] { '_', '.' });
+                                string CurrentFile = "";
+                                //StringBuilder FileSB = new StringBuilder();
+                                for(int i=1;i< Convert.ToInt16(DelFileNameArr[1]); i++)
+                                {
+                                    CurrentFile = DelFileNameArr[0] + "_" + i.ToString() + "." + DelFileNameArr[2];
+                                    if (File.Exists(m_docsPath + "/" + CurrentFile))
+                                    {
+                                        File.Delete(m_docsPath + "/" + CurrentFile);
+                                    }
+                                    //FileSB.Append(CurrentFile+"///");
+                                }
                             }
                             context.Response.ContentLength64 = 0;
                             context.Response.ContentType = @"text/html";
