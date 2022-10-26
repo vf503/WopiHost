@@ -88,7 +88,7 @@ namespace WopiCobaltHost
                         var fileExt = filename.Substring(filename.LastIndexOf('.') + 1);
                         string UserId = context.Request.QueryString["userid"].ToString(); 
                         string UserName = context.Request.QueryString["username"].ToString(); 
-                        //editSession = new FileSession(filename, m_docsPath + "/" + filename, @"_", @"_", @"chench@mx.cei.gov.cn", false);
+                        //editSession = new FileSession(filename, m_docsPath + "/" + filename, @"_", @"_", @"chench@mx.cn", false);
                         editSession = new FileSession(filename, m_docsPath + "/" + filename, UserId, UserName, "", false);
 
                         EditSessionManager.Instance.AddSession(editSession);
@@ -129,9 +129,21 @@ namespace WopiCobaltHost
                                 string[] DelFileNameArr = DelFileName.Split(new char[2] { '_', '.' });
                                 string CurrentFile = "";
                                 //StringBuilder FileSB = new StringBuilder();
-                                for(int i=1;i< Convert.ToInt16(DelFileNameArr[1]); i++)
+                                int FileCount = 0;
+                                if (DelFileNameArr.Count() == 3)
+                                { FileCount = Convert.ToInt16(DelFileNameArr[1]); }
+                                else if (DelFileNameArr.Count() == 4)
+                                { FileCount = Convert.ToInt16(DelFileNameArr[2]); }
+                                for (int i=1;i< FileCount; i++)
                                 {
-                                    CurrentFile = DelFileNameArr[0] + "_" + i.ToString() + "." + DelFileNameArr[2];
+                                    if (DelFileNameArr.Count() == 3)
+                                    {
+                                        CurrentFile = DelFileNameArr[0] + "_" + i.ToString() + "." + DelFileNameArr[2];
+                                    }
+                                    else if (DelFileNameArr.Count() == 4)
+                                    {
+                                        CurrentFile = DelFileNameArr[0] + "_" + DelFileNameArr[1] + "_" + i.ToString() + "." + DelFileNameArr[3];
+                                    }
                                     if (File.Exists(m_docsPath + "/" + CurrentFile))
                                     {
                                         File.Delete(m_docsPath + "/" + CurrentFile);
